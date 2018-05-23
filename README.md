@@ -10,9 +10,11 @@ base on :
 windows 下使用 nodejieba 模块可能会有意外问题，请使用 Linux 或 macOS 
 
 usage:
-1. 将node_modules/bayeszh中的classifier.json文件移到./中。
-
-1. 运行以下代码
+1. 下载模块
+`npm install https://github.com/leekafai/bayeszh.git -S`
+2. 将node_modules/bayeszh中的classifier.json文件移到./中。
+` cp node_modules/bayeszh/classifier.json ./`
+1. 写入以下代码(测试)
 ```javascript
 // ./index.js
 const bayes = require('bayeszh')
@@ -45,4 +47,16 @@ n.forEach((text) => {
     console.log('是广告:', text + '\n')
   }
 })
+```
+
+4. 运行测试
+`node index.js`
+
+5. 直接使用
+```javascript
+const bayes = require('bayeszh')
+const fs = require('fs')
+const classifierJson = fs.readFileSync('./classifier.json')
+const receiveClassifier = bayes.fromJson(classifierJson)
+receiveClassifier.categorize(text)
 ```
