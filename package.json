@@ -1,0 +1,20 @@
+{
+  "name": "word2class",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "bayes": "^0.0.7",
+    "lei-stream": "^1.4.2",
+    "mysql": "^2.15.0",
+    "nodejieba": "^2.2.6",
+    "progress": "^2.0.0",
+    "segment": "^0.1.3"
+  }
+}
