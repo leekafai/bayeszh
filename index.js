@@ -1,7 +1,7 @@
-// const path = require('path')
+const path = require('path')
 const nodejieba = require('nodejieba')
 nodejieba.load({
-  userDict: './userdict.utf8'
+  userDict: path.join(__dirname, '/userdict.utf8')
 })
 
 let reg = require('./reg')
